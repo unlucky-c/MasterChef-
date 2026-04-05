@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SyntheticMind</title>
+  <style>
+    body { font-family: Arial; background: #1a1a1a; color: #fff; margin: 0; padding: 20px; }
+    h1 { text-align: center; color: #6b48ff; }
+    .chat-container { display: flex; flex-direction: column; gap: 10px; }
+    input { padding: 10px; font-size: 16px; }
+    button { padding: 10px; background: #6b48ff; color: white; border: none; }
+    #response { margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h1>SyntheticMind 🧠</h1>
+  <div class="chat-container">
+    <input type="text" id="chatInput" placeholder="Type your message...">
+    <button onclick="sendMessage()">Send</button>
+    <div id="response">🤔 Processing...</div>
+  </div>
+  <script>
+    function sendMessage() {
+      const input = document.getElementById('chatInput').value;
+      if (input) {
+        document.getElementById('response').innerText = 'You said: ' + input;
+        document.getElementById('chatInput').value = ''; // Clear input
+      }
+    }
+  </script>
+</body>
+</html>
